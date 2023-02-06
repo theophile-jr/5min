@@ -1,0 +1,132 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  text-align: center;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.circle-wrapper {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle {
+	width: 90%;
+	height: 90%;
+	background: #2d3436;
+	border-radius: 50%;
+	box-shadow: 6px 6px 12px 0px rgb(0 0 0 / 35%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: circle-breath 10s ease infinite;
+	transform-origin: center;
+
+	&--middle {
+		width: 60px;
+		height: 60px;
+		animation: circle-breath-middle 10s ease infinite;
+	}
+	
+	&--top {
+		width: 30px;
+		height: 30px;
+		animation: circle-breath-top 10s ease infinite;
+	}
+}
+
+#breath-txt {
+	animation : text-breath infinite 10s ease;
+}
+
+@keyframes circle-breath {
+	0% {	
+		transform: scale(0);
+	}
+	
+	50% {	
+		transform: scale(1);
+	}
+	
+	60% {	
+		transform: scale(1);
+	}
+	
+	100% {	
+		transform: scale(0);
+	}
+}
+
+@keyframes circle-breath-middle {
+	0% {	
+		transform: scale(0);
+	}
+	
+	20% {	
+		transform: scale(0);
+	}
+	
+	50% {	
+		transform: scale(1);
+	}
+	
+	55% {	
+		transform: scale(1);
+	}
+	
+	85% {	
+		transform: scale(0);
+	}
+	
+	100% {	
+		transform: scale(0);
+	}
+}
+
+@keyframes circle-breath-top {
+	0% {	
+		transform: scale(0);
+	}
+	
+	40% {	
+		transform: scale(0);
+	}
+	
+	50% {	
+		transform: scale(1);
+	}
+	
+	53% {	
+		transform: scale(1);
+	}
+	
+	60% {	
+		transform: scale(0);
+	}
+	
+	100% {	
+		transform: scale(0);
+	}
+}

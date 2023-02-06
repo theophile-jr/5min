@@ -1,0 +1,7 @@
+{
+  "name": "ionic-5min",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
