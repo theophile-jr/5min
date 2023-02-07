@@ -14,4 +14,7 @@ export class HomePage {
   formSubmit() {
     this.router.navigateByUrl('/meditate');
   }
+  selectMusic(event : any){
+    this.meditate.meditate_form.music_name = event.target.value;
+  }
 }

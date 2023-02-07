@@ -8,18 +8,26 @@
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.music"></ion-checkbox>
       <ion-label>Music</ion-label>
     </ion-item>
-    <ion-item>
-      <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.vibrations"></ion-checkbox>
-      <ion-label>vibrations</ion-label>
+    <ion-item *ngIf="meditate.meditate_form.music">
+      <ion-select placeholder="Select music" (ionChange)="selectMusic($event)">
+        <ion-select-option *ngFor="let music of meditate.sounds_list" [value]="music.file_name">{{music.name}}</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item>
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.gongtime"></ion-checkbox>
-      <ion-label>gongtime</ion-label>
+      <ion-label>Breathe out/ Breathe in : sound signal</ion-label>
+    </ion-item>
+    <ion-button type="submit">Start</ion-button>
+  </form>
+</ion-content>
+
+
+<!--
+    <ion-item>
+      <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.vibrations"></ion-checkbox>
+      <ion-label>vibrations (soon)</ion-label>
     </ion-item>
     <ion-item>
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.breathsound"></ion-checkbox>
-      <ion-label>breathsound</ion-label>
-    </ion-item>
-    <button ion-button type="submit" block>Start</button>
-  </form>
-</ion-content>
+      <ion-label>breathsound (someday)</ion-label>
+    </ion-item>-->
