@@ -60,7 +60,8 @@ export class MeditatePage implements OnInit {
     }
     if (this.meditate.meditate_form.gongtime){
       this.gong_sound = new Audio();
-      this.gong_sound.src = '../../../assets/sounds/gong.wav';
+      this.gong_sound.volume = 0.2;
+      this.gong_sound.src = '../../../assets/sounds/gong.ogg';
       this.gong_sound.load();
     }
   }
