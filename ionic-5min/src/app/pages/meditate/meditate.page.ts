@@ -18,7 +18,7 @@ export class MeditatePage implements OnInit {
   gong_sound : any;
   time_left = this.meditate.meditate_form.time * 60 - this.total_time;
 
-  constructor(public meditate : MeditateDataService, private router : Router) {
+  constructor(public meditate : MeditateDataService, public router : Router) {
     this.breath_interval = interval(1000).subscribe(()=>{
       if (this.total_time >= (this.meditate.meditate_form.time * 60)){
         this.router.navigateByUrl('/home');
