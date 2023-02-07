@@ -32,7 +32,7 @@
     "@ionic/angular": "^6.1.9",
     "cordova-plugin-nativeaudio": "^3.0.9",
     "ionicons": "^6.0.3",
-    "rxjs": "~7.5.0",
+    "rxjs": "^6.5.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
