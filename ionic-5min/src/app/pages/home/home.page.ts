@@ -17,4 +17,11 @@ export class HomePage {
   selectMusic(event : any){
     this.meditate.meditate_form.music_name = event.target.value;
   }
+  increaseValue() {
+    this.meditate.meditate_form.time++;
+  }
+
+  decreaseValue() {
+    this.meditate.meditate_form.time--;
+  }
 }

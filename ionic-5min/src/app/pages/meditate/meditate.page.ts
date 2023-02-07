@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { MeditateDataService } from './../../services/meditate-data.service';
 import { Component, OnInit} from '@angular/core';
 import { interval, Observable } from 'rxjs';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-meditate',
@@ -15,6 +16,7 @@ export class MeditatePage implements OnInit {
   breath_interval;
   music: any;
   gong_sound : any;
+  time_left = this.meditate.meditate_form.time * 60 - this.total_time;
 
   constructor(public meditate : MeditateDataService, private router : Router) {
     this.breath_interval = interval(1000).subscribe(()=>{
@@ -23,8 +25,14 @@ export class MeditatePage implements OnInit {
       }
       this.reset_to_five++;
       this.total_time++;
+      this.time_left = this.meditate.meditate_form.time * 60 - this.total_time;
       if (this.reset_to_five == 5){
-        this.play_gong();
+        if (meditate.meditate_form.vibrations){
+          Haptics.impact({ style: ImpactStyle.Light });
+        }
+        if (meditate.meditate_form.gongtime){
+          this.play_gong();
+        }
         this.reset_to_five = 0;
       if (this.breath_text == "Breathe in"){
         this.breath_text = "Breathe out";

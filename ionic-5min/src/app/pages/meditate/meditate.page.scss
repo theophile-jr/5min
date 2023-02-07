@@ -8,13 +8,8 @@
   margin-top: -200px;
   margin-left: -200px;
   text-align: center;
-  border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-	overflow: hidden;
   color: #333;
 	font-family: 'Open Sans', Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .center {
@@ -25,8 +20,8 @@
 }
 
 .circle-wrapper {
-	width: 100px;
-	height: 100px;
+	width: 400px;
+	height: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,14 +40,14 @@
 	transform-origin: center;
 
 	&--middle {
-		width: 60px;
-		height: 60px;
+		width: 60%;
+		height: 60%;
 		animation: circle-breath-middle 10s ease infinite;
 	}
 
 	&--top {
-		width: 30px;
-		height: 30px;
+		width: 30%;
+		height: 30%;
 		animation: circle-breath-top 10s ease infinite;
 	}
 }

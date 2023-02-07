@@ -1,3 +1,10 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{this.time_left}} seconds left breath</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-fab slot="fixed" vertical="top" horizontal="end">
 	<ion-fab-button [routerLink]="['/home']">
 		<ion-icon name="exit"></ion-icon>
@@ -6,7 +13,7 @@
 
 <div class="frame">
   <div class="center">
-	{{breath_text}} {{this.total_time}}
+	{{breath_text}}
 		<div class="circle-wrapper">
 			<div class="circle circle--bottom">
 				<div class="circle circle--middle">
