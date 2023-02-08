@@ -52,16 +52,13 @@ export class MeditatePage implements OnInit {
   }
   ngOnInit() {
     if (this.meditate.meditate_form.music){
-      this.music = new Audio();
-      this.music.src = '../../../assets/sounds/' + this.meditate.meditate_form.music_name;
-      this.music.load();
-      this.music.play();
-      this.music.loop = true;
+      this.meditate.meditate_form.sound_load.audio.play();
+      this.meditate.meditate_form.sound_load.audio.loop = true;
     }
     if (this.meditate.meditate_form.gongtime){
       this.gong_sound = new Audio();
       this.gong_sound.volume = 0.2;
-      this.gong_sound.src = '../../../assets/sounds/gong.ogg';
+      this.gong_sound.src = '../../../assets/sounds/gong.mp3';
       this.gong_sound.load();
     }
   }
@@ -72,8 +69,7 @@ export class MeditatePage implements OnInit {
     }
     this.breath_interval.unsubscribe();
     if (this.meditate.meditate_form.music){
-      this.music.pause();
-      this.music = null;
+      this.meditate.meditate_form.sound_load.audio.pause();
     }
   }
 }

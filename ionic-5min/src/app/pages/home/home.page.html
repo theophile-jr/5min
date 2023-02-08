@@ -1,4 +1,18 @@
 <ion-content>
+  <div class="frame">
+  <div class="center">
+		<div class="circle-wrapper">
+			<div class="circle circle--bottom">
+				<div class="circle circle--middle">
+					<div class="circle circle--top">
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+
+
   <form (ngSubmit)="formSubmit()" style="text-align: center;">
     <ion-item>
       <ion-input type="number" pattern="[0-9]*" [(ngModel)]="meditate.meditate_form.time" name="time"></ion-input>
@@ -23,7 +37,7 @@
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.vibrations"></ion-checkbox>
       <ion-label>Vibrations</ion-label>
     </ion-item>
-    <ion-button type="submit" ion-center>Start</ion-button>
+    <ion-button type="submit" ion-center [disabled]="!this.meditate.meditate_form.sound_load.loaded && this.meditate.meditate_form.music">Start</ion-button>
   </form>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">

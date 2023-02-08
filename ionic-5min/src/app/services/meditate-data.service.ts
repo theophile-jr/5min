@@ -12,13 +12,17 @@ export class MeditateDataService {
     vibrations : false,
     gongtime : false,
     breathsound : false,
+    sound_load : {
+      loaded: false,
+      audio : new Audio(),
+    }
   }
   sounds_list = [
-    {name : 'Musique', file_name : 'music-relax.ogg'},
-    {name : 'Rivière', file_name : 'river.ogg'},
-    {name : 'Ocean', file_name : 'ocean.ogg'},
-    {name : 'Forêt', file_name : 'forest.ogg'},
-    {name : 'Bruit blanc', file_name : 'white-noise.ogg'},
+    {name : 'Musique', file_name : 'music-relax.mp3'},
+    {name : 'Rivière', file_name : 'river.mp3'},
+    {name : 'Ocean', file_name : 'ocean.mp3'},
+    {name : 'Forêt', file_name : 'forest.mp3'},
+    {name : 'Bruit blanc', file_name : 'white-noise.mp3'},
   ]
   constructor() { }
 }
