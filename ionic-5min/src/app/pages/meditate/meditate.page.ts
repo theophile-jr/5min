@@ -51,9 +51,9 @@ export class MeditatePage implements OnInit {
     }
   }
   ngOnInit() {
-    if (this.meditate.meditate_form.music){
-      this.meditate.meditate_form.sound_load.audio.play();
-      this.meditate.meditate_form.sound_load.audio.loop = true;
+    if (this.meditate.meditate_form.sound.enabled){
+      this.meditate.meditate_form.sound.audio.play();
+      this.meditate.meditate_form.sound.audio.loop = true;
     }
     if (this.meditate.meditate_form.gongtime){
       this.gong_sound = new Audio();
@@ -68,8 +68,8 @@ export class MeditatePage implements OnInit {
       this.gong_sound = null;
     }
     this.breath_interval.unsubscribe();
-    if (this.meditate.meditate_form.music){
-      this.meditate.meditate_form.sound_load.audio.pause();
+    if (this.meditate.meditate_form.sound.enabled){
+      this.meditate.meditate_form.sound.audio.pause();
     }
   }
 }

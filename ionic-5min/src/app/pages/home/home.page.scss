@@ -16,9 +16,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -26,12 +24,27 @@
   text-decoration: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#checkbox {
+  width: 300px;
+}
+
+#volButton {
+  width: 15%;
+  font-size: 30px;
+}
+
 //circle
 
 // use only the available space inside the 400x400 frame
 .frame {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   width: 400px;
   height: 400px;
