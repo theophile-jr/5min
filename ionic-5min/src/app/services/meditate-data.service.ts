@@ -12,7 +12,7 @@ export class MeditateDataService {
     breathsound : false,
     sound : {
       enabled : false,
-      file_name: "music-relax.ogg",
+      file_name: "",
       loaded: false,
       audio : new Audio(),
     }
@@ -24,6 +24,7 @@ export class MeditateDataService {
     {name : 'Ocean', file_name : 'ocean.mp3'},
     {name : 'Forêt', file_name : 'forest.mp3'},
     {name : 'Bruit blanc', file_name : 'white-noise.mp3'},
+    {name : 'Interstellar', file_name : 'interstellar.mp3'},
   ]
   constructor(private window : Window) { }
 }

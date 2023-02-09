@@ -3,6 +3,9 @@ import { MeditateDataService } from '../../services/meditate-data.service';
 import { Component } from '@angular/core';
 import { Preferences } from '@capacitor/preferences';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
+
+
 
 @Component({
   selector: 'app-home',
