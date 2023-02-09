@@ -26,11 +26,12 @@ export class HomePage {
     this.meditate.meditate_form.sound.loaded = false;
     this.meditate.meditate_form.sound.file_name = event.target.value;
     this.meditate.meditate_form.sound.audio = new Audio();
-    this.meditate.meditate_form.sound.audio.load();
-    this.meditate.meditate_form.sound.audio.src = "assets/sounds/" + this.meditate.meditate_form.sound.file_name;
     this.meditate.meditate_form.sound.audio.addEventListener("canplaythrough", (ev) => {
       this.meditate.meditate_form.sound.loaded = true;
     });
+    this.meditate.meditate_form.sound.audio.preload = "auto";
+    this.meditate.meditate_form.sound.audio.src = "assets/sounds/" + this.meditate.meditate_form.sound.file_name;
+    this.meditate.meditate_form.sound.audio.load();
   }
   increaseValue() {
     this.meditate.meditate_form.time++;
