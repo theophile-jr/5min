@@ -35,7 +35,7 @@
         [(ngModel)]="meditate.meditate_params.enabled_music"></ion-checkbox>
       <ion-label>Music</ion-label>
     </ion-item>
-    <ion-item lines="none" *ngIf="meditate.meditate_params.enabled_music" [ngClass]="(meditate.meditate_params.enabled_music && !audio.sounds.music.loaded) ? 'mustSelectMusic' : ''">
+    <ion-item lines="none" *ngIf="meditate.meditate_params.enabled_music">
       <ion-select placeholder="Select music" (ionChange)="selectMusic($event)">
         <ion-select-option *ngFor="let music of meditate.sounds_list" [value]="music.file_name">{{music.name}}
         </ion-select-option>
