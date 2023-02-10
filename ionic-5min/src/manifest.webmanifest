@@ -1,9 +1,9 @@
 {
-  "name": "app",
-  "short_name": "app",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "name": "5min",
+  "short_name": "5min",
+  "theme_color": "#3880ff",
+  "background_color": "#3880ff",
+  "display": "portrait",
   "scope": "./",
   "start_url": "./",
   "icons": [
