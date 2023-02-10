@@ -13,8 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   enabled: !isDevMode(),
   registrationStrategy: 'registerImmediately',
 })],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-  { provide: Window, useValue: window }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

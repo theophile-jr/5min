@@ -11,12 +11,12 @@
   </ion-header>
     <ion-item lines="none">
       <ion-label>Gong volume</ion-label>
-      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.meditate.meditate_form.gongvolume">
+      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.audio.sounds.gong.volume">
       </ion-range>
     </ion-item>
     <ion-item lines="none">
       <ion-label>Music volume</ion-label>
-      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.meditate.meditate_form.sound.volume">
+      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.audio.sounds.music.volume">
       </ion-range>
     </ion-item>
 </ion-content>

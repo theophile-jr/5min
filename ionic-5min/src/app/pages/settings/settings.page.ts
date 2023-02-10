@@ -1,4 +1,4 @@
-import { MeditateDataService } from './../../services/meditate-data.service';
+import { AudioService } from './../../services/audio/audio.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(public meditate : MeditateDataService) { }
+  constructor(public audio : AudioService) { }
   ngOnInit() {
 
   }

@@ -5,19 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class MeditateDataService {
 
-  meditate_form = {
-    time: 5,
-    vibrations : false,
-    gongtime : false,
-    gongvolume : 0.5,
-    breathsound : false,
-    sound : {
-      enabled : false,
-      file_name: "",
-      loaded: false,
-      audio : new Audio(),
-      volume: 0.5,
-    }
+  meditate_params = {
+    duration: 5,
+    enabled_vibrations : false,
+    enabled_gong : false,
+    enabled_music : false,
   }
 
   sounds_list = [

@@ -25,32 +25,34 @@
 
   <form (ngSubmit)="formSubmit()" style="text-align: center">
     <ion-item lines="none" style="display: inline-block" id="checkbox">
-      <ion-input min="0" type="number" pattern="[0-9]*" [(ngModel)]="meditate.meditate_form.time" name="time"></ion-input>
+      <ion-input min="0" type="number" pattern="[0-9]*" [(ngModel)]="meditate.meditate_params.duration" name="time"></ion-input>
       <ion-label>minutes</ion-label>
       <ion-button id="volButton" (click)="increaseTime()">+</ion-button>
       <ion-button id="volButton" (click)="decreaseTime()">-</ion-button>
     </ion-item>
     <ion-item lines="none" id="checkbox">
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start"
-        [(ngModel)]="meditate.meditate_form.sound.enabled"></ion-checkbox>
+        [(ngModel)]="meditate.meditate_params.enabled_music"></ion-checkbox>
       <ion-label>Music</ion-label>
     </ion-item>
-    <ion-item lines="none" *ngIf="meditate.meditate_form.sound.enabled">
+    <ion-item lines="none" *ngIf="meditate.meditate_params.enabled_music">
       <ion-select placeholder="Select music" (ionChange)="selectMusic($event)">
         <ion-select-option *ngFor="let music of meditate.sounds_list" [value]="music.file_name">{{music.name}}
         </ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item lines="none" id="checkbox">
-      <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.gongtime">
+      <ion-checkbox (ionChange)="loadGong($event)" [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_params.enabled_gong">
       </ion-checkbox>
       <ion-label>Sound signal</ion-label>
     </ion-item>
     <ion-item lines="none" id="checkbox">
-      <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_form.vibrations">
+      <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_params.enabled_vibrations">
       </ion-checkbox>
       <ion-label>Vibrations</ion-label>
     </ion-item>
-    <ion-button type="submit" ion-center [disabled]="!this.meditate.meditate_form.sound.loaded &&
-    this.meditate.meditate_form.sound.enabled">Start</ion-button>
+    <ion-button type="submit" ion-center [disabled]="
+    (!this.audio.sounds.music.loaded && this.meditate.meditate_params.enabled_music) ||
+    (!this.audio.sounds.gong.loaded && this.meditate.meditate_params.enabled_gong)
+    ">Start</ion-button>
   </form>
