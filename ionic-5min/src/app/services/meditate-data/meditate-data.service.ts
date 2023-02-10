@@ -20,5 +20,5 @@ export class MeditateDataService {
     {name : 'Bruit blanc', file_name : 'white-noise.mp3'},
     {name : 'Interstellar', file_name : 'interstellar.mp3'},
   ]
-  constructor(private window : Window) { }
+  constructor() { }
 }
