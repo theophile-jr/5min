@@ -1,9 +1,9 @@
 {
   "name": "5min",
-  "short_name": "5min",
+  "short_name": "3880ff",
   "theme_color": "#3880ff",
-  "background_color": "#3880ff",
-  "display": "portrait",
+  "background_color": "#fafafa",
+  "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
