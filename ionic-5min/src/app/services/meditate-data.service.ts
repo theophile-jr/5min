@@ -9,12 +9,14 @@ export class MeditateDataService {
     time: 5,
     vibrations : false,
     gongtime : false,
+    gongvolume : 0.5,
     breathsound : false,
     sound : {
       enabled : false,
       file_name: "",
       loaded: false,
       audio : new Audio(),
+      volume: 0.5,
     }
   }
 

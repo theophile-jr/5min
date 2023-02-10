@@ -11,9 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: !isDevMode(),
-  // Register the ServiceWorker as soon as the application is stable
-  // or after 30 seconds (whichever comes first).
-  registrationStrategy: 'registerWhenStable:30000'
+  registrationStrategy: 'registerImmediately',
 })],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
   { provide: Window, useValue: window }],

@@ -1,3 +1,4 @@
+import { MeditateDataService } from './../../services/meditate-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor() { }
-
+  constructor(public meditate : MeditateDataService) { }
   ngOnInit() {
-  }
 
+  }
 }

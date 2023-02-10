@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>settings</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content>
-
+  <ion-header collapse="fade">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#" [routerLink]="['/home']"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <ion-item lines="none">
+      <ion-label>Gong volume</ion-label>
+      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.meditate.meditate_form.gongvolume">
+      </ion-range>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Music volume</ion-label>
+      <ion-range step="0.1" [ngModelOptions]="{standalone: true}" min="0" max="1" [(ngModel)]="this.meditate.meditate_form.sound.volume">
+      </ion-range>
+    </ion-item>
 </ion-content>

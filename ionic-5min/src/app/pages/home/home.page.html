@@ -1,11 +1,11 @@
-<ion-header collapse="fade" style="text-align: center">
+<ion-header collapse="fade">
   <ion-toolbar>
-    <ion-title>Meditate now ... - 5min</ion-title>
+    <ion-title>Meditate now... - 5min</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <div class="frame" [@moveUp]>
+  <div class="frame">
     <div class="center">
       <div class="circle-wrapper">
         <div class="circle circle--bottom">
@@ -17,12 +17,18 @@
     </div>
   </div>
 
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['/settings']">
+      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <form (ngSubmit)="formSubmit()" style="text-align: center">
     <ion-item lines="none" style="display: inline-block" id="checkbox">
-      <ion-input type="number" pattern="[0-9]*" [(ngModel)]="meditate.meditate_form.time" name="time"></ion-input>
+      <ion-input min="0" type="number" pattern="[0-9]*" [(ngModel)]="meditate.meditate_form.time" name="time"></ion-input>
       <ion-label>minutes</ion-label>
-      <ion-button id="volButton" (click)="increaseValue()">+</ion-button>
-      <ion-button id="volButton" (click)="decreaseValue()">-</ion-button>
+      <ion-button id="volButton" (click)="increaseTime()">+</ion-button>
+      <ion-button id="volButton" (click)="decreaseTime()">-</ion-button>
     </ion-item>
     <ion-item lines="none" id="checkbox">
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start"

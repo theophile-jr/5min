@@ -51,7 +51,6 @@ form {
   margin-top: -200px;
   margin-left: -200px;
   text-align: center;
-  color: #333;
 	font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
@@ -72,9 +71,9 @@ form {
 
 .circle {
   transform: scale(1);
-	width: 90%;
-	height: 90%;
-	background: #2d3436;
+	width: 60%;
+	height: 60%;
+	background: var(--circle-color);
 	border-radius: 50%;
 	box-shadow: 6px 6px 12px 0px rgb(0 0 0 / 35%);
 	display: flex;
