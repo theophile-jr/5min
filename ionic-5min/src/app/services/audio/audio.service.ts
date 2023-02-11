@@ -48,7 +48,7 @@ export class AudioService {
   }
 
   public play_gong(){
-    this.sounds.gong.audio.volume = this.sounds.music.volume;
+    this.sounds.gong.audio.volume = this.sounds.gong.volume;
     if (this.sounds.gong.audio.paused){
       this.sounds.gong.audio.play();
     }else{
