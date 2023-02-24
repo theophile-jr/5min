@@ -5,8 +5,9 @@ Application made by Théophile Jérôme-Rocher
 issues to fix : 
 - vibrations --> detect if available & check if it works built for phones
 - sound : some issues with sound occasionnaly (due to using html5 audio)
+- add ionic icons to serviceworker save
 to add/improve:
-- settings (change volume level, why cardiac coherence)
+- settings (change volume level, why cardiac coherence), save settings locally
 - more options sound (youtube/spotify import?) / more options gong 
 - improve app's esthetic
 - try to improve app's performance/code
