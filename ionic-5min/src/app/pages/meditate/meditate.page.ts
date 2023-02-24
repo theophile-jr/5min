@@ -60,19 +60,10 @@ export class MeditatePage implements OnInit {
         Haptics.impact({ style: ImpactStyle.Light });
       }
       if (this.meditate.meditate_params.enabled_gong) {
-        this.play_gong();
+        this.audio.play_gong();
       }
       this.reset_to_five = 0;
       this.toggle_BreathText();
-    }
-  }
-
-  play_gong() {
-    if (this.audio.sounds.gong.audio.paused) {
-      this.audio.sounds.gong.audio.play();
-    } else {
-      this.audio.sounds.gong.audio.currentTime = 0;
-      this.audio.sounds.gong.audio.play();
     }
   }
 }
