@@ -6,7 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class AudioService {
 
-  constructor(public meditate : MeditateDataService) { }
+  constructor(public meditate : MeditateDataService, public data : MeditateDataService) {
+    this.data.get_saved_settings().then((val : any)=>{
+      if (val != null){
+        this.sounds.gong.volume = val.gong.volume;
+        this.sounds.music.volume = val.gong.volume;
+      }
+    })
+  }
 
   sounds = {
     gong : {

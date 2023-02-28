@@ -4,7 +4,7 @@
   <ion-header collapse="fade">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button default-href="#" [routerLink]="['/home']"></ion-back-button>
+        <ion-back-button default-href="#" (click)="this.save_settings()" [routerLink]="['/home']"></ion-back-button>
       </ion-buttons>
       <ion-title>Settings</ion-title>
     </ion-toolbar>

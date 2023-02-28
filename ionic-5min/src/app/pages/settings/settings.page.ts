@@ -1,5 +1,6 @@
 import { AudioService } from './../../services/audio/audio.service';
 import { Component, OnInit } from '@angular/core';
+import { MeditateDataService } from 'src/app/services/meditate-data/meditate-data.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(public audio : AudioService) { }
-  ngOnInit() {
-
+  constructor(public audio : AudioService, public data : MeditateDataService) { }
+  save_settings(){
+    this.data.save_settings(this.audio.sounds);
   }
+  ngOnInit() {}
 }

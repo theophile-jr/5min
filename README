@@ -2,6 +2,8 @@ Application made by Théophile Jérôme-Rocher
 --> meditate with cardiac coherence with a minimalist and complete App
 --> made with angular / ionic, pwa hosted in CD with netlify
 
+//improve struct --> viable final
+
 issues to fix : 
 - vibrations --> detect if available & check if it works built for phones
 - sound : some issues with sound occasionnaly (due to using html5 audio)

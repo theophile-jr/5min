@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Preferences } from '@capacitor/preferences';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class MeditateDataService {
 
   meditate_params = {
@@ -10,6 +12,21 @@ export class MeditateDataService {
     enabled_vibrations : false,
     enabled_gong : false,
     enabled_music : false,
+  }
+
+  get_saved_settings(){
+    return new Promise((resolve, reject) =>{
+      Preferences.get({key : 'settings'}).then((val : any)=>{
+        resolve(JSON.parse(val.value));
+      });
+    });
+  }
+
+  save_settings(settings){
+    Preferences.set({
+      key: 'settings',
+      value: JSON.stringify(settings)
+    });
   }
 
   sounds_list = [
