@@ -33,7 +33,7 @@
     <ion-item lines="none" id="checkbox">
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start"
         [(ngModel)]="meditate.meditate_params.enabled_music"></ion-checkbox>
-      <ion-label>Music</ion-label>
+      <ion-label>Play music</ion-label>
     </ion-item>
     <ion-item lines="none" *ngIf="meditate.meditate_params.enabled_music">
       <ion-select placeholder="Select music" (ionChange)="selectMusic($event)">
@@ -44,15 +44,15 @@
     <ion-item lines="none" id="checkbox">
       <ion-checkbox (ionChange)="loadGong($event)" [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_params.enabled_gong">
       </ion-checkbox>
-      <ion-label>Sound signal</ion-label>
+      <ion-label>Breathe/exhale sound signal<ion-label>
     </ion-item>
     <ion-item lines="none" id="checkbox">
       <ion-checkbox [ngModelOptions]="{standalone: true}" slot="start" [(ngModel)]="meditate.meditate_params.enabled_vibrations">
       </ion-checkbox>
-      <ion-label>Vibrations</ion-label>
+      <ion-label>Vibrations ...</ion-label>
     </ion-item>
     <ion-button #submitBtn type="submit" ion-center [disabled]="
     (!this.audio.sounds.music.loaded && this.meditate.meditate_params.enabled_music) ||
     (!this.audio.sounds.gong.loaded && this.meditate.meditate_params.enabled_gong)
-    ">{{submitBtn.disabled ? "Loading..." : "Start"}}</ion-button>
+    ">{{submitBtn.disabled ? "Loading..." : "Start ..."}}</ion-button>
   </form>
