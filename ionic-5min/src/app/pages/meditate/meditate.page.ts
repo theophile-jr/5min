@@ -4,6 +4,7 @@ import { MeditateDataService } from './../../services/meditate-data/meditate-dat
 import { Component, OnInit } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { KeepAwake } from '@capacitor-community/keep-awake';
 
 @Component({
   selector: 'app-meditate',
@@ -27,6 +28,7 @@ export class MeditatePage implements OnInit {
     if (this.meditate.meditate_params.enabled_music) {
       this.audio.play_music();
     }
+    KeepAwake.keepAwake();
   }
 
   ngOnDestroy() {
@@ -38,6 +40,7 @@ export class MeditatePage implements OnInit {
     if (this.meditate.meditate_params.enabled_gong) {
       this.audio.sounds.gong.audio.pause();
     }
+    KeepAwake.allowSleep();
   }
 
   toggle_BreathText() {

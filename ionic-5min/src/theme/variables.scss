@@ -89,7 +89,7 @@
     --ion-color-primary-contrast-rgb: 255,255,255;
     --ion-color-primary-shade: #3a7be0;
     --ion-color-primary-tint: #5598ff;
-    --circle-color: white;
+    --circle-color: rgb(255, 255, 255);
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;
@@ -154,8 +154,8 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0,0,0;
+    --ion-background-color: #2c2f33;
+    --ion-background-color-rgb: #2c2f33;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
