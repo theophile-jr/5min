@@ -10,7 +10,7 @@ export class AudioService {
     this.data.get_saved_settings().then((val : any)=>{
       if (val != null){
         this.sounds.gong.volume = val.gong.volume;
-        this.sounds.music.volume = val.gong.volume;
+        this.sounds.music.volume = val.music.volume;
       }
     })
   }
